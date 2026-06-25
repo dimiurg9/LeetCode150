@@ -15,10 +15,11 @@ s and t consist of lowercase English letters.
  
 Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 """
-
+from collections import Counter
 
 def is_valid_anagram(s, t):
     pass
+    
     
 
 s = "anagram"
