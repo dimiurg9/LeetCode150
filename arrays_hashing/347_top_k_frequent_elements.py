@@ -24,7 +24,25 @@ Follow up: Your algorithm's time complexity must be better than O(n log n), wher
 """
 
 def top_k_frequent(nums, k):
-    pass
+    counts = {}
+    for i in nums:
+        counts[i] = counts.get(i, 0) + 1
+
+    buckets = [[] for i in range(len(nums) + 1)]
+
+    for i, freq in counts.items():
+        buckets[freq].append(i)
+
+    result = []
+    for i in range(len(buckets) -1, 0, -1):
+        for items in buckets[i]:
+            result.append(items)
+            if len(result) == k:
+                return result
+            
+    return result
+
+
 
 
 test_cases = [
