@@ -29,6 +29,7 @@ def top_k_frequent(nums, k):
         count[i] = count.get(i, 0) +1
 
     buckets =  [[] for i in range(len(nums) + 1)]
+    
     for num, freq in count.items():
         buckets[freq].append(num)
 

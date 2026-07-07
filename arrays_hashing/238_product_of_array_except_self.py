@@ -30,8 +30,11 @@ Follow up: Can you solve it in O(1) extra space complexity?
 
 def product_except_self(nums):
     pass
+        
 
 
+
+    
 test_cases = [
     ([1, 2, 3, 4],        [24, 12, 8, 6]),
     ([-1, 1, 0, -3, 3],   [0, 0, 9, 0, 0]),

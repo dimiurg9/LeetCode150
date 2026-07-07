@@ -18,17 +18,10 @@ All elements are distinct.
 """
 
 def contain_duplicates(nums):
-    return len(nums) != len(set(nums))
+    pass
 
 def contain_duplicates_no_set(nums):
-    seen = []
-
-    for i in nums:
-        if i in seen: 
-            return True
-        seen.append(i)
-
-    return False
+    pass
 
 nums = [1,2,3,1]
 result = contain_duplicates(nums)
