@@ -1,0 +1,3 @@
+# Do this for all your practice files at once
+git ls-files '*.py' ':!:*_solution.py' | xargs -I {} git update-index --skip-worktree {}
+
