@@ -69,7 +69,7 @@ Harness note:
 # SOLUTION 1: Pair stack — store (value, min_so_far)  (BEST)
 # Remember as: "Every element carries its own min in its backpack."
 # =============================================================================
-class MinStackPairs:
+class MinStack:
     def __init__(self):
         self.stack = []  # list of (val, min_so_far)
 
@@ -117,7 +117,7 @@ class MinStackTwoStacks:
 # -----------------------------------------------------------------------------
 # Harness: replays the operation list against a chosen implementation.
 # -----------------------------------------------------------------------------
-def min_stack_operations(operations, args, impl=MinStackPairs):
+def min_stack_operations(operations, args, impl=MinStack):
     results = []
     obj = None
     method_names = {"push": "push", "pop": "pop", "top": "top", "getMin": "get_min"}
@@ -167,7 +167,7 @@ test_cases = [
      [None, None, None, None, 7, 7]),
 ]
 
-for impl in (MinStackPairs, MinStackTwoStacks):
+for impl in (MinStack, MinStackTwoStacks):
     print(f"--- {impl.__name__} ---")
     for i, (operations, args, expected) in enumerate(test_cases, 1):
         result = min_stack_operations(operations, args, impl)

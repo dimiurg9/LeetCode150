@@ -39,9 +39,26 @@ Harness note:
   (push / pop), mirroring LeetCode's `null`.
 """
 
+# class MinStack:
+#   pass
+   
 
-def min_stack_operations(operations, args):
-    pass
+
+# -----------------------------------------------------------------------------
+# Harness: replays the operation list against the implementation.
+# -----------------------------------------------------------------------------
+def min_stack_operations(operations, args, impl=MinStack):
+    results = []
+    obj = None
+    method_names = {"push": "push", "pop": "pop", "top": "top", "getMin": "getMin"}
+
+    for op, arg in zip(operations, args):
+        if op == "MinStack":
+            obj = impl()
+            results.append(None)
+        else:
+            results.append(getattr(obj, method_names[op])(*arg))
+    return results
 
 
 test_cases = [
